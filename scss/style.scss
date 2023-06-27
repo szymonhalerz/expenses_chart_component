@@ -1,0 +1,285 @@
+@use './colors' as *;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'DM Sans', sans-serif;
+	background-color: $cream;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.expenses-card {
+	padding: 30px 20px;
+	.card-top {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 15px;
+		border-radius: 10px;
+		background-color: $soft-red;
+
+		.card-text {
+			color: $very-pale-orange;
+
+			.heading {
+				font-size: 14px;
+			}
+
+			.money {
+				margin-top: 5px;
+				font-size: 25px;
+				font-weight: bold;
+			}
+		}
+
+		.logo {
+			display: flex;
+			align-self: center;
+			height: 40px;
+		}
+	}
+
+	.card-bottom {
+		margin-top: 20px;
+		padding: 15px;
+		border-radius: 10px;
+		background-color: $very-pale-orange;
+
+		h2 {
+			font-size: 22px;
+			color: $dark-brown;
+		}
+
+		.graph-box {
+			display: flex;
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			margin-top: 40px;
+
+			.post-box {
+				display: flex;
+				flex-direction: column;
+				align-self: flex-end;
+				text-align: center;
+				padding: 5px;
+
+				.post {
+					width: 27px;
+					border-radius: 3px;
+				}
+
+				p {
+					padding-top: 7px;
+					font-size: 11px;
+					color: $medium-brown;
+				}
+			}
+
+			.mon,
+			.tue,
+			.thu,
+			.fri,
+			.sat,
+			.sun {
+				background-color: $soft-red;
+			}
+
+			.mon {
+				height: 45px;
+			}
+
+			.tue {
+				height: 90px;
+			}
+
+			.wed {
+				height: 130px;
+				background-color: $cyan;
+			}
+
+			.thu {
+				height: 70px;
+			}
+
+			.fri {
+				height: 55px;
+			}
+
+			.sat {
+				height: 100px;
+			}
+
+			.sun {
+				height: 55px;
+			}
+		}
+
+		.line {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			height: 1px;
+			width: 100%;
+			background-color: hsla(28, 10%, 53%, 0.318);
+		}
+
+		.text {
+			display: flex;
+			justify-content: space-between;
+
+			.text-left {
+				.heading {
+					font-size: 15px;
+					color: $medium-brown;
+				}
+
+				.money-2 {
+					margin-top: 5px;
+					font-size: 30px;
+					font-weight: bold;
+					color: $dark-brown;
+				}
+			}
+
+			.text-right {
+				margin-top: 25px;
+
+				p {
+					font-size: 15px;
+					color: $medium-brown;
+				}
+
+				.percent {
+					font-size: 15px;
+					text-align: right;
+					font-weight: bold;
+					color: $dark-brown;
+				}
+			}
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+	.expenses-card {
+		padding: 50px 25px;
+		.card-top {
+			.card-text {
+				.heading {
+					font-size: 15px;
+				}
+
+				.money {
+					font-size: 27px;
+				}
+			}
+
+			.logo {
+				height: 45px;
+			}
+		}
+
+		.card-bottom {
+			h2 {
+				font-size: 25px;
+			}
+
+			.graph-box {
+				margin-top: 50px;
+
+				.post-box {
+					padding: 7px;
+
+					.post {
+						width: 29px;
+					}
+
+					p {
+						padding-top: 9px;
+						font-size: 12px;
+					}
+				}
+
+				.mon,
+				.tue,
+				.thu,
+				.fri,
+				.sat,
+				.sun {
+					background-color: $soft-red;
+				}
+
+				.mon {
+					height: 55px;
+				}
+
+				.tue {
+					height: 100px;
+				}
+
+				.wed {
+					height: 140px;
+					background-color: $cyan;
+				}
+
+				.thu {
+					height: 89px;
+				}
+
+				.fri {
+					height: 65px;
+				}
+
+				.sat {
+					height: 110px;
+				}
+
+				.sun {
+					height: 65px;
+				}
+			}
+
+			.text {
+				.text-left {
+					.heading {
+						font-size: 16px;
+					}
+
+					.money-2 {
+						font-size: 32px;
+					}
+				}
+
+				.text-right {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+
+// @media (min-width: 1440px) {
+@media (min-width: 992px) {
+	.container {
+		max-width: 500px;
+	}
+}
